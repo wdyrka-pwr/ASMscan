@@ -12,7 +12,7 @@ def calculate_metrics(y_true, y_pred):
 
     # Determination of fpr parameters for interpolation of the tpr parameter (based on the number of samples)
     n_samples = len(y_true)
-    order_of_magnitude = int(np.log10(1 / n_samples))
+    order_of_magnitude = int(np.log10(1.0 / n_samples))
     fpr_interp = [np.power(10.0, i) for i in range(-1, order_of_magnitude - 1, -1)]
 
     tpr = np.interp(fpr_interp, fpr, tpr)
