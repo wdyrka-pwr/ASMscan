@@ -1,7 +1,7 @@
 import csv
 import sys
 
-from metricer import calculate_metrics
+from scripts.metricer import calculate_metrics
 
 def load_csv(filename, colnum, infval):
     y_score = []
